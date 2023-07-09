@@ -44,6 +44,14 @@
     border-radius: 3px;
 }
 
+.current {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
 .forecast {
     position: relative;
     display: inline-block;
