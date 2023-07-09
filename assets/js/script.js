@@ -7,9 +7,12 @@ var searchBtn = $('#search-btn');
 var searchHistoryEl = $('#history-list');
 var currentWeatherEl = $('.current-weather');
 var forecastEl = $('.forecast-cards');
-
-let requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&units=imperial';
-
+var currentCityEl = $('#current-city');
+var currentTempEl = $('#current-temp');
+var currentHumidityEl = $('#current-humidity');
+var currentWindEl = $('#current-wind');
+ 
+var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&units=imperial';
 // Get current weather and forecast
 function getWeather() {
     fetch(requestUrl)
@@ -20,11 +23,12 @@ function getWeather() {
             console.log(data);
         });
     }
-
+//event listener to search button
     searchBtn.on('click', function () {
         var searchInput = searchEl.val();
         console.log(searchInput);
         getWeather();
     }
-    )
+    );
+
 
